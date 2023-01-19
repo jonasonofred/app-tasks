@@ -1,0 +1,19 @@
+.CreateTodoButton {
+  width: 64px;
+  height: 64px;
+  font-size: 50px;
+  font-weight: bold;
+  background-color: var(--color-primary);
+  color: #FAFAFA;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  transition: transform .1ms ease;
+}
+
+.CreateTodoButton:hover {
+  transform: scale(1.5);
+}

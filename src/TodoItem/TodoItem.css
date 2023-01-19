@@ -1,0 +1,43 @@
+.TodoItem {
+  border: 1px solid gray;
+  border-radius: 20px;
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  font-family: 'Noto Serif JP', sans-serif;
+  font-style: italic;
+  word-break: break-all;
+  overflow: hidden;
+  gap: 20px;
+  padding: 15px 10px;
+}
+
+.Icon-check {
+  cursor: pointer;
+}
+
+.Icon-check:hover svg {
+  fill: #82e0aa;
+}
+
+.Icon-check img {
+  vertical-align: middle;
+}
+
+.Icon-delete {
+  cursor: pointer;
+}
+
+.Icon-delete:hover svg {
+  fill: red;
+}
+
+.Icon-check--active {
+  fill: #82e0aa;
+}
+
+.TodoItem-p--complete {
+  text-decoration: line-through;
+}

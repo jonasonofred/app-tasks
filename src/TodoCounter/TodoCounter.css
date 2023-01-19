@@ -1,0 +1,25 @@
+.TodoCounter {
+  background: url('../assets/img/hokages.png') top/100% no-repeat;
+  margin-bottom: 40px;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.TodoCounter--title {
+  text-align: center;
+  color: #fd601b;
+  font-size: 40px;
+  font-family: 'Naruto', sans-serif;
+  font-weight: 200;
+  -webkit-text-stroke: 1.1px white;
+  letter-spacing: -3px;
+}
+
+.TodoCounter--Subtitle {
+  text-align: center;
+  color: #038ad1;
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 20px;
+}

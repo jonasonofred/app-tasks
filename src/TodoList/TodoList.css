@@ -1,0 +1,30 @@
+.Todo {
+  max-width: 500px;
+  padding: 0 10px;
+  max-height: 305px;
+  overflow-y: scroll;
+  background-color: white;
+
+  /* scrollbar-color: red orange; */
+  /* scrollbar-color: rebeccapurple green; */
+  /* scrollbar-width: thin; */
+}
+
+.Todo--counter {
+  text-align: center;
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 18px;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.Todo__items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+
