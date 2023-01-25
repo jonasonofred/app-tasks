@@ -1,5 +1,6 @@
 /* Tools */
 import React from "react";
+import { useLocalStorage } from "../customHooks/useLocalStorage";
 
 /* My Components */
 import { AppUI } from "./AppUI";
@@ -23,25 +24,12 @@ import { AppUI } from "./AppUI";
 
 function App() {
 
-  /* Realizando persistencia de datos con Local Storage */
-  const localStorageTodos = localStorage.getItem('TODOS_V1');
-  let parsedTodos;
-
-  if(!localStorageTodos) {
-
-    localStorage.setItem('TODOS_V1', JSON.stringify([]));
-    parsedTodos = [];
-
-  } else {
-
-    parsedTodos = JSON.parse(localStorageTodos);
-
-  }
+  /* Usando nuestro propio hook, nuestro custom react hook. */
+  const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
 
 
 
   /* Usando el estado de React con los React Hooks */
-  const [todos, setTodos] = React.useState(parsedTodos);
   const [searchValue, setSearchValue] = React.useState('');
 
 
@@ -54,15 +42,6 @@ function App() {
 
   /* Se buscan las tareas por letra o palabra */
   const filterTodos = todos.filter(todo => todo.text.toLowerCase().match(searchValue.toLowerCase()));
-
-
-
-  /* Función 'puente' para guardar los datos en Local Storage y actualizar el estado de las tareas. */
-  const saveTodos = newTodos => {
-    const stringTodos = JSON.stringify(newTodos);
-    localStorage.setItem('TODOS_V1', stringTodos);
-    setTodos(newTodos);
-  }
 
 
 
